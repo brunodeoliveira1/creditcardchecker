@@ -41,13 +41,11 @@ const idInvalidCardCompanies = array => {
   for (let i = 0; i < invalidArray.length; i++) {
     switch(invalidArray[i][0]) {
       case(3):
-        if (arrayOfCompanies.includes('Amex (American Express)')) {
-        } else {
+        if (arrayOfCompanies.includes('Amex (American Express)')) {} else {
           arrayOfCompanies.push('Amex (American Express)');
         }
       case(4):
-        if (arrayOfCompanies.includes('Visa')) {
-        } else {
+        if (arrayOfCompanies.includes('Visa')) {} else {
           arrayOfCompanies.push('Visa');
         }
       case(5):
