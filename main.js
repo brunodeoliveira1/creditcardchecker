@@ -26,7 +26,7 @@ const findInvalidCards = array => {
   let invalidArray = [];
   const arrLen = array.length;
   for (let i = 0; i < arrLen; i++) {
-      if (validateCred(array[i]) === false) {
+      if (validateCred(array[i]) !== true) {
         invalidArray.push(array[i]);
     }
   }
