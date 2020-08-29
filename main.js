@@ -38,24 +38,24 @@ const findInvalidCards = array => {
 const idInvalidCardCompanies = array => {
   const invalidArray = findInvalidCards(array);
   let arrayOfCompanies = [];
+  let cardBrand = '';
   for (let i = 0; i < invalidArray.length; i++) {
     switch(invalidArray[i][0]) {
-      case(3):
-        if (arrayOfCompanies.includes('Amex (American Express)')) {} else {
-          arrayOfCompanies.push('Amex (American Express)');
-        }
-      case(4):
-        if (arrayOfCompanies.includes('Visa')) {} else {
-          arrayOfCompanies.push('Visa');
-        }
-      case(5):
-        if (arrayOfCompanies.includes('Mastercard')) {} else {
-          arrayOfCompanies.push('Mastercard');
-        }
-      case(6):
-        if (arrayOfCompanies.includes('Discover')) {} else {
-          arrayOfCompanies.push('Discover');
-        }
+      case 3:
+        cardBrand = 'Amex (American Express)';
+        break;
+      case 4:
+        cardBrand = 'Visa';
+        break;
+      case 5:
+        cardBrand = 'Mastercard';
+        break;
+      case 6:
+        cardBrand = 'Discover';
+        break;
+    }
+    if (!arrayOfCompanies.includes(cardBrand)){
+      arrayOfCompanies.push(cardBrand);
     }
   } 
   return arrayOfCompanies;
